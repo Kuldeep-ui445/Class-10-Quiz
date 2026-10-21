@@ -3,73 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Quiz</title>
+    <title>My Quiz Website</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f0f4f8;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 20px;
             text-align: center;
-            padding: 30px;
         }
 
-        .quiz {
-            background: white;
-            max-width: 500px;
+        h1 {
+            color: #2563eb;
+        }
+
+        .quiz-container {
+            max-width: 900px;
             margin: auto;
-            padding: 25px;
-            border-radius: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
         }
 
-        button {
-            display: block;
+        iframe {
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
+            height: 800px;
             border: none;
-            border-radius: 8px;
-            background: #2563eb;
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #1d4ed8;
         }
     </style>
 </head>
+
 <body>
 
-<div class="quiz">
-    <h1>My Quiz</h1>
-    <h3 id="question">What is the capital of India?</h3>
+    <h1>My Quiz Website</h1>
+    <p>Attempt the quiz below!</p>
 
-    <button onclick="checkAnswer('Mumbai')">Mumbai</button>
-    <button onclick="checkAnswer('New Delhi')">New Delhi</button>
-    <button onclick="checkAnswer('Kolkata')">Kolkata</button>
-
-    <p id="result"></p>
-    <p id="score">Score: 0</p>
-</div>
-
-<script>
-    let score = 0;
-    let answered = false;
-
-    function checkAnswer(answer) {
-        if (answered) return;
-        answered = true;
-
-        if (answer === "New Delhi") {
-            document.getElementById("result").textContent = "Correct!";
-            score++;
-        } else {
-            document.getElementById("result").textContent = "Incorrect! Try again next time.";
-        }
-
-        document.getElementById("score").textContent = "Score: " + score;
-    }
-</script>
+    <div class="quiz-container">
+        <iframe src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekmXkhIS_bxuOn0ABozEyizvmaJrGRWj70aQh-sSbE1S8IUw/viewform?embedded=true" width="640" height="6514" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>">
+        </iframe>
+    </div>
 
 </body>
 </html>
